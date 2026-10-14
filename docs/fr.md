@@ -84,11 +84,13 @@ Bon à savoir :
 - Un flux qui publie beaucoup d'articles d'un coup lance au plus 5 scènes
   par lecture (les 5 plus récents).
 
-**Dernier article d'un flux** donne `{{title}}`, `{{link}}`, `{{summary}}`,
-`{{published}}`, `{{feed}}` et `{{count}}` pour l'article le plus récent
-d'un flux (son nom ou sa position dans la liste ; vide pour tous les flux)
-dont le titre contient un mot (facultatif). `count` vaut 0 quand rien ne
-correspond.
+**Dernier article d'un flux** donne `title`, `link`, `summary`,
+`published`, `feed` et `count` pour l'article le plus récent d'un flux (son
+nom ou sa position dans la liste ; vide pour tous les flux) dont le titre
+contient un mot (facultatif). `count` vaut 0 quand rien ne correspond. Les
+actions suivantes de la scène les trouvent dans leur liste de variables
+(écrites `{{<étape>.<action>.<clé>}}`, par exemple `{{0.0.title}}` quand
+cette action est la première de la scène).
 
 ## Widget
 

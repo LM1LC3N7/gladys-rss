@@ -80,10 +80,12 @@ Good to know:
 - A feed that publishes many articles at once starts at most 5 scenes per
   reading (the 5 newest).
 
-**Latest article of a feed** gives `{{title}}`, `{{link}}`, `{{summary}}`,
-`{{published}}`, `{{feed}}` and `{{count}}` for the newest article of a feed
-(its name or its position in the list; empty for all feeds) whose title
-contains a word (optional). `count` is 0 when nothing matches.
+**Latest article of a feed** gives `title`, `link`, `summary`, `published`,
+`feed` and `count` for the newest article of a feed (its name or its
+position in the list; empty for all feeds) whose title contains a word
+(optional). `count` is 0 when nothing matches. The following actions of the
+scene find them in their variable list (written `{{<step>.<action>.<key>}}`,
+for instance `{{0.0.title}}` when this action is the first of the scene).
 
 ## Widget
 
