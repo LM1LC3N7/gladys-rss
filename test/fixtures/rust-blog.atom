@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <generator uri="https://blog.rust-lang.org/" version="0.1.0">Rust Blog</generator>
+    <link href="https://blog.rust-lang.org/feed.xml" rel="self" type="application/atom+xml" />
+    <link href="https://blog.rust-lang.org/" rel="alternate" type="text/html" />
+    <id>https://blog.rust-lang.org/</id>
+    <title>Rust Blog</title>
+    <subtitle>Empowering everyone to build reliable and efficient software.</subtitle>
+    <author>
+        <name>Maintained by the Rust Teams.</name>
+        <uri>https://github.com/rust-lang/blog.rust-lang.org/</uri>
+    </author>
+    <updated>2026-10-13T17:21:43+00:00</updated>
+
+    
+    <entry>
+        <title>Demoting i686 Windows targets to std-only</title>
+        <link rel="alternate" href="https://blog.rust-lang.org/2026/10/02/demoting-i686-windows-targets-to-std-only/" type="text/html" title="Demoting i686 Windows targets to std-only" />
+        <published>2026-10-02T00:00:00+00:00</published>
+        <updated>2026-10-02T00:00:00+00:00</updated>
+        <id>https://blog.rust-lang.org/2026/10/02/demoting-i686-windows-targets-to-std-only/</id>
+        <content type="html" xml:base="https://blog.rust-lang.org/2026/10/02/demoting-i686-windows-targets-to-std-only/">&lt;p&gt;With Rust 1.100.0, the following changes to 32-bit Windows targets will happen:&lt;/p&gt;</content>
+
+        <author>
+            <name>Mateusz Mikuła, Ralf Jung</name>
+        </author>
+    </entry>
+    <entry>
+        <title>Announcing Rust 1.99.0</title>
+        <link rel="alternate" href="https://blog.rust-lang.org/2026/10/01/Rust-1.99.0/" type="text/html" title="Announcing Rust 1.99.0" />
+        <published>2026-10-01T00:00:00+00:00</published>
+        <updated>2026-10-01T00:00:00+00:00</updated>
+        <id>https://blog.rust-lang.org/2026/10/01/Rust-1.99.0/</id>
+        <content type="html" xml:base="https://blog.rust-lang.org/2026/10/01/Rust-1.99.0/">&lt;p&gt;The Rust team is happy to announce a new version of Rust, 1.99.0. Rust is a programming language empowering everyone to build reliable and efficient software.&lt;/p&gt;</content>
+
+        <author>
+            <name>The Rust Release Team</name>
+        </author>
+    </entry>
+    <entry>
+        <title>Announcing a Maintainer in Residence: Scott Schafer for the Cargo team</title>
+        <link rel="alternate" href="https://blog.rust-lang.org/2026/09/22/announcing-a-maintainer-in-residence-scott-schafer-for-the-cargo-team/" type="text/html" title="Announcing a Maintainer in Residence: Scott Schafer for the Cargo team" />
+        <published>2026-09-22T00:00:00+00:00</published>
+        <updated>2026-09-22T00:00:00+00:00</updated>
+        <id>https://blog.rust-lang.org/2026/09/22/announcing-a-maintainer-in-residence-scott-schafer-for-the-cargo-team/</id>
+        <content type="html" xml:base="https://blog.rust-lang.org/2026/09/22/announcing-a-maintainer-in-residence-scott-schafer-for-the-cargo-team/">&lt;p&gt;At the end of August, we &lt;a rel&#x3D;&quot;external&quot; href&#x3D;&quot;https://blog.rust-lang.org/2026/08/26/announcing-our-first-maintainers-in-residence/&quot;&gt;announced&lt;/a&gt; our first Maintainers in Residence, Rust Project contributors who are funded for their upstream contributions and &lt;a rel&#x3D;&quot;external&quot; href&#x3D;&quot;https://blog.rust-lang.org/inside-rust/2026/01/12/what-is-maintenance-anyway/&quot;&gt;maintenance work&lt;/a&gt; from the &lt;a rel&#x3D;&quot;external&quot; href&#x3D;&quot;https://github.com/sponsors/rustfoundation&quot;&gt;Rust Foundation Maintainers Fund&lt;/a&gt; (RFMF). Since then, the Rust Leadership Council has dedicated more funds from its Project Priorities budget to RFMF, and together with AWS also providing additional funds, this allowed us to open a new full-time Maintainer in Residence (MiR) position to support the Cargo team. We would like to thank the Rust Leadership Council, AWS, and also the Rust Foundation for providing us with this opportunity! If you would like to help us hire more maintainers to improve Rust, consider &lt;a rel&#x3D;&quot;external&quot; href&#x3D;&quot;https://github.com/sponsors/rustfoundation&quot;&gt;donating&lt;/a&gt; to RFMF.&lt;/p&gt;</content>
+
+        <author>
+            <name>Jakub Beránek</name>
+        </author>
+    </entry>
+</feed>

@@ -1,0 +1,236 @@
+{
+  "manifest_version": 1,
+  "type": "provider",
+  "name": "RSS & Atom",
+  "description": {
+    "en": "Latest articles of your RSS and Atom feeds: a dashboard widget and \"new article\" scenes.",
+    "fr": "Derniers articles de vos flux RSS et Atom : un widget et des scènes « nouvel article »."
+  },
+  "version": "0.1.0",
+  "docker_image": "ghcr.io/lm1lc3n7/gladys-rss:0.1.0",
+  "gladys_version": ">=5.1.0",
+  "cover_image": "https://raw.githubusercontent.com/LM1LC3N7/gladys-rss/main/cover.png",
+  "categories": ["services", "notifications"],
+  "transports": ["cloud"],
+  "config_schema": [
+    {
+      "key": "intro",
+      "type": "section",
+      "label": { "en": "Your news feeds in Gladys", "fr": "Vos flux d'actualités dans Gladys" },
+      "description": {
+        "en": "Reads the RSS 2.0, RSS 1.0 and Atom feeds you list below (no account, no key): a \"News\" widget shows their latest articles, a scene can start when a new article is published (optionally only for a keyword in its title), and the \"Latest article\" scene action reads one into a message. Not affiliated with the publishers of the feeds: the articles belong to them. Feeds are read one after another, every 15 minutes by default, or less often when a publisher asks for it.",
+        "fr": "Lit les flux RSS 2.0, RSS 1.0 et Atom listés ci-dessous (sans compte ni clé) : un widget « Actualités » montre leurs derniers articles, une scène peut démarrer quand un nouvel article est publié (éventuellement seulement pour un mot-clé du titre), et l'action de scène « Dernier article » en lit un dans un message. Sans lien avec les éditeurs des flux : les articles leur appartiennent. Les flux sont lus l'un après l'autre, toutes les 15 minutes par défaut, ou moins souvent quand un éditeur le demande."
+      },
+      "links": [
+        {
+          "url": "https://github.com/LM1LC3N7/gladys-rss/blob/main/docs/fr.md",
+          "label": { "en": "Guide (French)", "fr": "Guide (français)" }
+        },
+        {
+          "url": "https://github.com/LM1LC3N7/gladys-rss/blob/main/docs/en.md",
+          "label": { "en": "Guide (English)", "fr": "Guide (anglais)" }
+        },
+        {
+          "url": "https://www.rssboard.org/rss-specification",
+          "label": { "en": "The RSS 2.0 format", "fr": "Le format RSS 2.0" }
+        },
+        {
+          "url": "https://www.rfc-editor.org/rfc/rfc4287",
+          "label": { "en": "The Atom format (RFC 4287)", "fr": "Le format Atom (RFC 4287)" }
+        }
+      ]
+    },
+    {
+      "key": "feeds",
+      "type": "string",
+      "label": { "en": "Feeds", "fr": "Flux" },
+      "description": {
+        "en": "Feed addresses (http or https), separated by commas. Optional custom name after a space or a | — e.g. \"https://www.lemonde.fr/rss/une.xml Le Monde, https://community.gladysassistant.com/latest.rss|Forum\". The name is what scenes and widgets use to pick a feed.",
+        "fr": "Adresses des flux (http ou https), séparées par des virgules. Nom personnalisé facultatif après une espace ou un | — ex. « https://www.lemonde.fr/rss/une.xml Le Monde, https://community.gladysassistant.com/latest.rss|Forum ». Ce nom sert aux scènes et aux widgets pour choisir un flux."
+      },
+      "required": false,
+      "placeholder": {
+        "en": "https://www.lemonde.fr/rss/une.xml Le Monde, https://example.org/feed.xml",
+        "fr": "https://www.lemonde.fr/rss/une.xml Le Monde, https://example.org/feed.xml"
+      }
+    },
+    {
+      "key": "interval",
+      "type": "number",
+      "label": { "en": "Reading interval (minutes)", "fr": "Intervalle de lecture (minutes)" },
+      "description": {
+        "en": "How often each feed is read. A feed that asks for a longer delay (Cache-Control, ttl) is read less often.",
+        "fr": "Fréquence de lecture de chaque flux. Un flux qui demande un délai plus long (Cache-Control, ttl) est lu moins souvent."
+      },
+      "required": false,
+      "default": 15,
+      "min": 5,
+      "max": 1440
+    },
+    {
+      "key": "max_items",
+      "type": "number",
+      "label": { "en": "Articles kept per feed", "fr": "Articles gardés par flux" },
+      "description": {
+        "en": "The newest articles of each feed shown by the widget and the scene action; a new article is announced once it enters them.",
+        "fr": "Les articles les plus récents de chaque flux, montrés par le widget et l'action de scène ; un nouvel article est annoncé quand il y entre."
+      },
+      "required": false,
+      "default": 10,
+      "min": 1,
+      "max": 50
+    },
+    {
+      "key": "keywords",
+      "type": "string",
+      "label": {
+        "en": "Keywords for the \"new article\" trigger",
+        "fr": "Mots-clés du déclencheur « nouvel article »"
+      },
+      "description": {
+        "en": "Optional, separated by commas. A new article whose title contains one of them (case and accents ignored) carries it, so a scene can filter on it: type it in the trigger exactly as here.",
+        "fr": "Facultatif, séparés par des virgules. Un nouvel article dont le titre en contient un (casse et accents ignorés) le porte, et une scène peut filtrer dessus : saisissez-le dans le déclencheur exactement comme ici."
+      },
+      "required": false,
+      "placeholder": { "en": "Gladys, Zigbee, storm", "fr": "Gladys, Zigbee, orage" }
+    }
+  ],
+  "actions": [
+    {
+      "key": "test_feeds",
+      "timeout_seconds": 120,
+      "label": { "en": "Test the feeds", "fr": "Tester les flux" },
+      "description": {
+        "en": "Reads every feed now and shows, for each one, its format, its number of articles and the latest title, or the error.",
+        "fr": "Lit chaque flux maintenant et affiche, pour chacun, son format, son nombre d'articles et le dernier titre, ou l'erreur."
+      }
+    }
+  ],
+  "widgets": [
+    {
+      "key": "news",
+      "label": { "en": "News feeds", "fr": "Fil d'actualités" },
+      "description": {
+        "en": "The latest articles of one feed or of all of them, with their age and a link.",
+        "fr": "Les derniers articles d'un flux ou de tous, avec leur âge et un lien."
+      },
+      "icon": "rss",
+      "settings": [
+        {
+          "key": "feed",
+          "type": "string",
+          "required": false,
+          "label": {
+            "en": "Feed: its name or its position in the list (empty: all feeds)",
+            "fr": "Flux : son nom ou sa position dans la liste (vide : tous les flux)"
+          },
+          "placeholder": { "en": "Le Monde", "fr": "Le Monde" }
+        },
+        {
+          "key": "count",
+          "type": "number",
+          "required": false,
+          "default": 5,
+          "min": 1,
+          "max": 8,
+          "label": { "en": "Articles shown", "fr": "Articles affichés" }
+        }
+      ]
+    }
+  ],
+  "scene_triggers": [
+    {
+      "key": "new_article",
+      "label": { "en": "New article in a feed", "fr": "Nouvel article dans un flux" },
+      "description": {
+        "en": "A feed published an article that was not there at its previous reading (nothing fires at the first reading after a start).",
+        "fr": "Un flux a publié un article absent de sa lecture précédente (rien ne se déclenche à la première lecture après un démarrage)."
+      },
+      "fields": [
+        {
+          "key": "feed",
+          "type": "string",
+          "required": false,
+          "label": {
+            "en": "Feed name (empty: any feed)",
+            "fr": "Nom du flux (vide : tous les flux)"
+          },
+          "placeholder": { "en": "Le Monde", "fr": "Le Monde" }
+        },
+        {
+          "key": "keyword",
+          "type": "string",
+          "required": false,
+          "label": {
+            "en": "Keyword of the configuration (empty: any article)",
+            "fr": "Mot-clé de la configuration (vide : tous les articles)"
+          },
+          "placeholder": { "en": "Gladys", "fr": "Gladys" }
+        }
+      ],
+      "variables": [
+        { "key": "feed", "type": "string", "label": { "en": "Feed", "fr": "Flux" } },
+        {
+          "key": "keyword",
+          "type": "string",
+          "label": { "en": "Keyword found", "fr": "Mot-clé trouvé" }
+        },
+        { "key": "title", "type": "string", "label": { "en": "Title", "fr": "Titre" } },
+        { "key": "link", "type": "string", "label": { "en": "Link", "fr": "Lien" } },
+        { "key": "summary", "type": "string", "label": { "en": "Summary", "fr": "Résumé" } },
+        {
+          "key": "published",
+          "type": "string",
+          "label": { "en": "Published at (ISO)", "fr": "Publié le (ISO)" }
+        }
+      ]
+    }
+  ],
+  "scene_actions": [
+    {
+      "key": "get_latest_article",
+      "label": { "en": "Latest article of a feed", "fr": "Dernier article d'un flux" },
+      "description": {
+        "en": "The newest article of a feed (or of all), optionally with a keyword in its title, for a message or a condition that follows.",
+        "fr": "L'article le plus récent d'un flux (ou de tous), éventuellement avec un mot-clé dans le titre, pour un message ou une condition qui suit."
+      },
+      "timeout_seconds": 30,
+      "fields": [
+        {
+          "key": "feed",
+          "type": "string",
+          "required": false,
+          "label": {
+            "en": "Feed: its name or its position in the list (empty: all feeds)",
+            "fr": "Flux : son nom ou sa position dans la liste (vide : tous les flux)"
+          }
+        },
+        {
+          "key": "keyword",
+          "type": "string",
+          "required": false,
+          "label": {
+            "en": "Word in the title (empty: any article)",
+            "fr": "Mot dans le titre (vide : tous les articles)"
+          }
+        }
+      ],
+      "outputs": [
+        { "key": "feed", "type": "string", "label": { "en": "Feed", "fr": "Flux" } },
+        { "key": "title", "type": "string", "label": { "en": "Title", "fr": "Titre" } },
+        { "key": "link", "type": "string", "label": { "en": "Link", "fr": "Lien" } },
+        { "key": "summary", "type": "string", "label": { "en": "Summary", "fr": "Résumé" } },
+        {
+          "key": "published",
+          "type": "string",
+          "label": { "en": "Published at (ISO)", "fr": "Publié le (ISO)" }
+        },
+        {
+          "key": "count",
+          "type": "number",
+          "label": { "en": "Matching articles", "fr": "Articles correspondants" }
+        }
+      ]
+    }
+  ]
+}

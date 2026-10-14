@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:discourse="http://www.discourse.org/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Gladys Assistant community - Sujets récents</title>
+    <link>https://community.gladysassistant.com/latest</link>
+    <description>Sujets récents</description>
+    <language>fr</language>
+      <lastBuildDate>Tue, 13 Oct 2026 22:02:02 +0000</lastBuildDate>
+      <atom:link href="https://community.gladysassistant.com/latest.rss" rel="self" type="application/rss+xml" />
+        <item>
+          <title>Intégration externe - Flipr (analyseur de piscine et Flipr Hub)</title>
+          <dc:creator><![CDATA[member1]]></dc:creator>
+          <category>Développement</category>
+          <description><![CDATA[
+            <p>Bonjour à tous,</p>
+<p>Pour ceux qui ont une piscine équipée d’un Flipr, voici une intégration externe qui amène ses mesures et le Flipr Hub dans Gladys.</p>
+]]></description>
+          <link>https://community.gladysassistant.com/t/integration-externe-flipr-analyseur-de-piscine-et-flipr-hub/11147</link>
+          <pubDate>Tue, 13 Oct 2026 22:02:02 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">community.gladysassistant.com-topic-11147</guid>
+          <source url="https://community.gladysassistant.com/t/integration-externe-flipr-analyseur-de-piscine-et-flipr-hub/11147.rss">Intégration externe - Flipr (analyseur de piscine et Flipr Hub)</source>
+        </item>
+        <item>
+          <title>Intégration externe - LinkPlay (WiiM, Arylic, Audio Pro…)</title>
+          <dc:creator><![CDATA[member2]]></dc:creator>
+          <category>Développement</category>
+          <description><![CDATA[
+            <p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gladys-assistant-community.b-cdn.net/uploads/default/original/3X/d/4/d49f1710fdda0da971a3ca5a133bda6b269d3761.png" data-download-href="https://gladys-assistant-community.b-cdn.net/uploads/default/d49f1710fdda0da971a3ca5a133bda6b269d3761" title="cover-linkplay"><img src="https://gladys-assistant-community.b-cdn.net/uploads/default/optimized/3X/d/4/d49f1710fdda0da971a3ca5a133bda6b269d3761_2_600x400.png" alt="cover-linkplay" data-base62-sha1="ukW4vuzMGf14I0h4GsvSGKeKIz7" width="600" height="400" srcset="https://gladys-assistant-community.b-cdn.net/uploads/default/optimized/3X/d/4/d49f1710fdda0da971a3ca5a133bda6b269d3761_2_600x400.png, https://gladys-assistant-community.b-cdn.net/uploads/default/original/3X/d/4/d49f1710fdda0da971a3ca5a133bda6b269d3761.png 1.5x, https://gladys-assistant-community.b-cdn.net/uploads/default/original/3X/d/4/d49f1710fdda0da971a3ca5a133bda6b269d3761.png 2x" data-dominant-color="EFF8FC"></a></div><p></p>
+]]></description>
+          <link>https://community.gladysassistant.com/t/integration-externe-linkplay-wiim-arylic-audio-pro/11146</link>
+          <pubDate>Tue, 13 Oct 2026 21:33:23 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">community.gladysassistant.com-topic-11146</guid>
+          <source url="https://community.gladysassistant.com/t/integration-externe-linkplay-wiim-arylic-audio-pro/11146.rss">Intégration externe - LinkPlay (WiiM, Arylic, Audio Pro…)</source>
+        </item>
+        <item>
+          <title>Intégration externe - iRobot Roomba (en local)</title>
+          <dc:creator><![CDATA[member2]]></dc:creator>
+          <category>Développement</category>
+          <description><![CDATA[
+            <p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gladys-assistant-community.b-cdn.net/uploads/default/original/3X/3/d/3d0480ae789e6c3a2791373c2336c37c01f3185c.png" data-download-href="https://gladys-assistant-community.b-cdn.net/uploads/default/3d0480ae789e6c3a2791373c2336c37c01f3185c" title="cover-roomba"><img src="https://gladys-assistant-community.b-cdn.net/uploads/default/optimized/3X/3/d/3d0480ae789e6c3a2791373c2336c37c01f3185c_2_600x400.png" alt="cover-roomba" data-base62-sha1="8HMLTTOguMGcg0FXOuAEhUw0I1K" width="600" height="400" srcset="https://gladys-assistant-community.b-cdn.net/uploads/default/optimized/3X/3/d/3d0480ae789e6c3a2791373c2336c37c01f3185c_2_600x400.png, https://gladys-assistant-community.b-cdn.net/uploads/default/original/3X/3/d/3d0480ae789e6c3a2791373c2336c37c01f3185c.png 1.5x, https://gladys-assistant-community.b-cdn.net/uploads/default/original/3X/3/d/3d0480ae789e6c3a2791373c2336c37c01f3185c.png 2x" data-dominant-color="E8F1DC"></a></div><p></p>
+]]></description>
+          <link>https://community.gladysassistant.com/t/integration-externe-irobot-roomba-en-local/11145</link>
+          <pubDate>Tue, 13 Oct 2026 21:33:22 +0000</pubDate>
+          <discourse:topicPinned>No</discourse:topicPinned>
+          <discourse:topicClosed>No</discourse:topicClosed>
+          <discourse:topicArchived>No</discourse:topicArchived>
+          <guid isPermaLink="false">community.gladysassistant.com-topic-11145</guid>
+          <source url="https://community.gladysassistant.com/t/integration-externe-irobot-roomba-en-local/11145.rss">Intégration externe - iRobot Roomba (en local)</source>
+        </item>
+  </channel>
+</rss>
