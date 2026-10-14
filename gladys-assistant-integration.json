@@ -6,8 +6,8 @@
     "en": "Latest articles of your RSS and Atom feeds: a dashboard widget and \"new article\" scenes.",
     "fr": "Derniers articles de vos flux RSS et Atom : un widget et des scènes « nouvel article »."
   },
-  "version": "0.1.0",
-  "docker_image": "ghcr.io/lm1lc3n7/gladys-rss:0.1.0",
+  "version": "0.1.1",
+  "docker_image": "ghcr.io/lm1lc3n7/gladys-rss:0.1.1",
   "gladys_version": ">=5.1.0",
   "cover_image": "https://raw.githubusercontent.com/LM1LC3N7/gladys-rss/main/cover.png",
   "categories": ["services", "notifications"],

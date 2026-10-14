@@ -10,6 +10,8 @@ the notes of the version's GitHub Release.
 
 ## [Unreleased]
 
+## [0.1.1] - 2026-10-14
+
 ### Added
 
 - Reads RSS 2.0, RSS 1.0 (RDF) and Atom feeds typed in the configuration
@@ -32,3 +34,6 @@ the notes of the version's GitHub Release.
   link, summary, publication date and number of matching articles.
 - "Test the feeds" button: format, number of articles and latest title of
   each feed, or its error.
+
+[Unreleased]: https://github.com/LM1LC3N7/gladys-rss/compare/v0.1.1...HEAD
+[0.1.1]: https://github.com/LM1LC3N7/gladys-rss/releases/tag/v0.1.1
